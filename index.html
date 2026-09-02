@@ -140,33 +140,54 @@ function page(id){
  document.getElementById(id).classList.add('active');
 }
 function scp(id){
- const d=document.getElementById('detail'); d.style.display='block';
- const files={
- '001':[
-   'SCP-001',
-   'SPECIAL ACCESS',
-   'SCP-001 is a designation associated with several classified proposals concerning the Foundation’s origins and the nature of its most important anomaly. Access to individual SCP-001 proposals is restricted.'
- ],
- '049':[
-   'SCP-049',
-   'EUCLID',
-   'SCP-049 is a humanoid entity resembling a medieval plague doctor. It claims to be a physician dedicated to curing what it calls the “Pestilence.” SCP-049 can kill humans through physical contact and subsequently alter their bodies into reanimated entities that it considers cured.'
- ],
- '096':[
-   'SCP-096',
-   'EUCLID',
-   'SCP-096 is a humanoid creature normally characterized by extremely passive behavior. However, viewing its face causes it to become highly distressed and pursue the person who saw it with extraordinary determination. Its behavior returns to normal after the target is dealt with.'
- ],
- '173':[
-   'SCP-173',
-   'EUCLID',
-   'SCP-173 is a concrete and rebar statue that cannot move while directly observed. When no one is looking at it, SCP-173 can move extremely quickly. Personnel assigned to its containment must maintain appropriate observation procedures.'
- ],
- '682':[
-   'SCP-682',
-   'KETER',
-   'SCP-682 is a large, highly intelligent reptilian entity displaying extreme hostility toward life. It possesses remarkable physical strength, intelligence, and regenerative abilities and has repeatedly demonstrated an ability to survive severe attempts at destruction.'
- ]
+  const d = document.getElementById('detail');
+  d.style.display = 'block';
+
+  const files = {
+    '001': [
+      'SCP-001',
+      'SPECIAL ACCESS',
+      'SCP-001 is a designation associated with several classified proposals concerning the Foundation’s origins and the nature of its most important anomaly. Access to individual SCP-001 proposals is restricted.'
+    ],
+
+    '049': [
+      'SCP-049',
+      'EUCLID',
+      'SCP-049 is a humanoid entity resembling a medieval plague doctor. It claims to be a physician dedicated to curing what it calls the “Pestilence.” SCP-049 can kill humans through physical contact and subsequently alter their bodies into reanimated entities that it considers cured.'
+    ],
+
+    '096': [
+      'SCP-096',
+      'EUCLID',
+      'SCP-096 is a humanoid creature normally characterized by extremely passive behavior. However, viewing its face causes it to become highly distressed and pursue the person who saw it with extraordinary determination. Its behavior returns to normal after the target is dealt with.'
+    ],
+
+    '173': [
+      'SCP-173',
+      'EUCLID',
+      'SCP-173 is a concrete and rebar statue that cannot move while directly observed. When no one is looking at it, SCP-173 can move extremely quickly. Personnel assigned to its containment must maintain appropriate observation procedures.'
+    ],
+
+    '682': [
+      'SCP-682',
+      'KETER',
+      'SCP-682 is a large, highly intelligent reptilian entity displaying extreme hostility toward life. It possesses remarkable physical strength, intelligence, and regenerative abilities and has repeatedly demonstrated an ability to survive severe attempts at destruction.'
+    ]
+  };
+
+  const f = files[id];
+
+  d.innerHTML = `
+    <button class="back" onclick="document.getElementById('detail').style.display='none'">
+      ← CLOSE FILE
+    </button>
+    <h2>${f[0]}</h2>
+    <p><span class="tag">${f[1]}</span></p>
+    <p>${f[2]}</p>
+  `;
+
+  d.scrollIntoView({behavior:'smooth'});
+}
 };
 }
 </script>
