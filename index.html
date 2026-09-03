@@ -103,9 +103,10 @@ pre{white-space:pre-wrap;background:#07090a;border:1px solid #333;padding:15px;c
     <h1>PERSONNEL DIRECTORY</h1>
     <div class="grid">
      <div class="card"><h3>O5-3</h3><p>Clearance: <b>O5</b></p><p>Identity: CLASSIFIED</p></div>
-     <div class="card"><h3>DR. Jacob</h3><p>Department: Research</p><p>Clearance: Level 4</p></div>
-     <div class="card"><h3>AGENT Smith</h3><p>Department: Security</p><p>Clearance: Level 3</p></div>
-     <div class="card"><h3>MTF COMMAND Danielle Robinson</h3><p>Department: Mobile Task Forces</p><p>Clearance: Level 4</p></div>
+     <div class="card"><h3>Senior Dr. Jacob</h3><p>Department: Research</p><p>Clearance: Level 4</p></div>
+     <div class="card"><h3>Security Director Smith</h3><p>Department: Security</p><p>Clearance: Level 4</p></div>
+     <div class="card"><h3>MTF Commander: Danielle Robinson</h3><p>Department: Mobile Task Force: ALPHA-1</p><p>Clearance: Level 4</p></div>
+     <div class="card"><h3>Senior Researcher: David</h3><p>Department: Mobile Task Forces</p><p>Clearance: Level 4</p></div>
     </div>
    </section>
 
@@ -133,7 +134,7 @@ ALL SYSTEMS STABLE.
 function login(){
   const v = document.getElementById('pw').value;
 
-  if(v === '94381'){
+  if(v === '01260628'){
     document.getElementById('login').style.display = 'none';
     document.getElementById('network').style.display = 'block';
   } else {
@@ -155,10 +156,10 @@ function scp(id){
 
   const files = {
     '001': ['SCP-001','SPECIAL ACCESS','SCP-001 is a designation associated with several classified proposals concerning the Foundation’s origins and the nature of its most important anomaly.'],
-    '049': ['SCP-049','EUCLID','SCP-049 is a humanoid entity resembling a medieval plague doctor. It claims to be a physician dedicated to curing what it calls the Pestilence it is also capable of killing anyone by simply touching them. The cause for this is still unknown in the event of a breach, personnel are to spray lavender as a way of calming 049 down.'],
+    '049': ['SCP-049','EUCLID','SCP-049 is a humanoid entity resembling a medieval plague doctor. It claims to be a physician dedicated to curing what it calls the Pestilence. It is also capable of killing anyone by simply touching them. The cause for this is still unknown in the event of a breach, personnel are to spray lavender as a way of calming 049 down.'],
     '096': ['SCP-096','EUCLID','SCP-096 is a humanoid creature that becomes highly distressed when its face is viewed and will pursue the person who saw it; it is pale and extremely tall, can open its jaw 4 times the human norm, and can move up to recorded speeds of 35 Kilometers per hour.'],
     '173': ['SCP-173','EUCLID','SCP-173 is a concrete statue that cannot move while directly observed. When unobserved, it can move extremely quickly and can kill anyone by snapping their necks or by strangulation. Termination has been attempted; all results have concluded failures.'],
-    '682': ['SCP-682','KETER','SCP-682 is a highly intelligent reptilian entity with extreme hostility toward life and remarkable regenerative abilities it is extremely dangerous and must be soaked in a vat of sulfuric acid at all times.']
+    '682': ['SCP-682','KETER','SCP-682 is a highly intelligent reptilian entity with extreme hostility toward life and remarkable regenerative abilities. It is extremely dangerous and must be monitored at all times.']
   };
 
   const f = files[id];
